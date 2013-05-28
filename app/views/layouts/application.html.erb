@@ -7,7 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+   <div id="banner">
+      <img src="/assets/images/banner.jpg" /> 
+   </div>
    <div id="user_now">
       <% if user_signed_in? %>
          Welcome <%= current_user.email %>, Not this user?

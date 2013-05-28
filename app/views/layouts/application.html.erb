@@ -6,19 +6,17 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-   <div id="wrapper">
-      <div id="banner">
-         <img src="/assets/banner.jpg" /> 
-      </div>
-      <div id="user_now">
-         <% if user_signed_in? %>
-            Welcome <%= current_user.email %>, Not this user?
-            <%= link_to "Sign out", destroy_user_session_path, :method => :delete  %>
-         <% else %>
-            <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-         <% end %>
-      </div>
+<body class="centered">
+   <div id="banner">
+      <img src="/assets/banner.jpg" /> 
+   </div>
+   <div id="user_now">
+      <% if user_signed_in? %>
+         Welcome <%= current_user.email %>, Not this user?
+         <%= link_to "Sign out", destroy_user_session_path, :method => :delete  %>
+      <% else %>
+         <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+      <% end %>
    </div>
 
 <% flash.each do |name, msg| %>

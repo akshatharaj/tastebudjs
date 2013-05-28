@@ -1,0 +1,7 @@
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, 
+      :action => 'show', :name => restaurant.name  %>
+    </li>
+  <% end %>
+</ul>

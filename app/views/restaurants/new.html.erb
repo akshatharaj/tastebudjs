@@ -1,13 +1,15 @@
-Please enter restaurant information
-<hr> <br />
-<% form_for @restaurant do |f| -%>
-    Name: <%= f.text_field :name %> <br />
-    Phone: <%= f.text_field :phone %> <br />
-    Address Line 1: <%= f.text_field :address1 %> <br />
-    Address Line 2: <%= f.text_field :address2 %> <br />
-    City: <%= f.text_field :city %> <br /> 
-    Zip: <%= f.text_field :zip %> <br /> 
-    State: <%= f.text_field :state %> <br /> 
-    Comments: <%= f.text_field :other_comments %> <br /> 
-    <%= f.submit %>
-<% end -%>
+<div id="wrapper">
+   Please enter restaurant information
+   <hr> <br />
+   <%= form_for @restaurant do |f| -%>
+       Name: <%= f.text_field :name %> <br />
+       Phone: <%= f.text_field :phone %> <br />
+       Address Line 1: <%= f.text_field :address1 %> <br />
+       Address Line 2: <%= f.text_field :address2 %> <br />
+       City: <%= f.text_field :city %> <br /> 
+       Zip: <%= f.text_field :zip %> <br /> 
+       State: <%= f.text_field :state %> <br /> 
+       Comments: <%= f.text_field :other_comments %> <br /> 
+       <%= f.submit %>
+   <% end -%>
+</div>

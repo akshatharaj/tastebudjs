@@ -12,7 +12,10 @@ class RestaurantsController < ApplicationController
   end
 
   def index
-    @restaurants = Restaurant.where("name LIKE ?", "%#{params[:search]}%") if params[:search].present?
+    @restaurants = Restaurant.all
+    respond_to do |format|
+      format.html # index.html.erb
+    end
   end
 
   def search

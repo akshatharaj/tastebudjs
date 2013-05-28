@@ -9,7 +9,7 @@
 <body>
 
    <div id="user_now">
-      <% if user_signed_in?  %>
+      <% if user_signed_in? %>
          Welcome <%= current_user.email %>, Not this user?
          <%= link_to "Sign out", destroy_user_session_path, :method => :delete  %>
       <% else %>

@@ -11,24 +11,22 @@
     </div>
   <% end %>
 
-  <div class="objectdetail">
-    <div class="field">
-      <%= f.label :restaurant_id %><br />
-      <%= f.number_field :restaurant_id %>
-    </div>
-    <div class="field">
-      <%= f.hidden_field :user_id, :value => current_user.id %>
-    </div>
-    <div class="field">
-      <%= f.label :rating %><br />
-      <%= f.text_field :rating %>
-    </div>
-    <div class="field">
-      <%= f.label :comment %><br />
-      <%= f.text_field :comment %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+  <div class="field">
+    <%= f.label :restaurant_id %><br />
+    <%= f.number_field :restaurant_id %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br />
+    <%= f.text_field :rating %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
   </div>
 <% end %>

@@ -6,4 +6,6 @@
    <%= @restaurant.city %>
    <%= @restaurant.state %>
    <%= @restaurant.zip %><br />
+   <br />
+   <%= url_for(:action => 'index', :controller => 'reviews', :restaurant_id => @restaurant.id) %>
 </div>

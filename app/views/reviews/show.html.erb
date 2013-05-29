@@ -1,22 +1,24 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Restaurant:</b>
-  <%= @review.restaurant_id %>
-</p>
+<div id="object_detail">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <b>User:</b>
-  <%= @review.user_id %>
-</p>
+  <p>
+    <b>Restaurant:</b>
+    <%= @review.restaurant.name %>
+  </p>
 
-<p>
-  <b>Rating:</b>
-  <%= @review.rating %>
-</p>
+  <p>
+    <b>User:</b>
+    <%= @review.user.email %>
+  </p>
 
-<p>
-  <b>Comment:</b>
-  <%= @review.comment %>
-</p>
+  <p>
+    <b>Rating:</b>
+    <%= @review.rating %>
+  </p>
 
+  <p>
+    <b>Comment:</b>
+    <%= @review.comment %>
+  </p>
+</div>

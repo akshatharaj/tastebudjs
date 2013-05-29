@@ -1,6 +1,8 @@
 Tastebud::Application.routes.draw do
-  resources :reviews
 
+  resources :restaurants do
+    resources :reviews
+  end
 
   devise_for :users
 

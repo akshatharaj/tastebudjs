@@ -1,8 +1,6 @@
 class ReviewsController < ApplicationController
   respond_to :html, :xml
 
-  # GET /reviews
-  # GET /reviews.json
   def index
     @reviews = Review.where(:restaurant_id => params[:restaurant_id])
 
@@ -29,7 +27,6 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @review }
     end
   end
 

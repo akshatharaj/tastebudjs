@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
   # GET /reviews
   # GET /reviews.json
   def index
-    @reviews = Review.find(params[:restaurant_id])
+    @reviews = Review.where(:restaurant_id => params[:restaurant_id])
 
     respond_to do |format|
       format.html # index.html.erb

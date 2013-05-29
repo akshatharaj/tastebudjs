@@ -91,3 +91,7 @@ div.user_review p {
 div.user_review hr {
   width = 400px;
 }
+
+div#search {
+  float: right;  
+}

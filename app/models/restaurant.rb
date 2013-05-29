@@ -13,4 +13,5 @@ class Restaurant < ActiveRecord::Base
     else
       find(:all)
     end
+  end
 end

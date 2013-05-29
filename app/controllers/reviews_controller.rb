@@ -1,12 +1,15 @@
 class ReviewsController < ApplicationController
   respond_to :html, :xml
 
+  before_filter :authenticate_user!
   before_filter :load_restaurant
 
+  skip_before_filter :authenticate_user, :only => [:show, :index]
+
   private
-    def load_restaurant
-      @restaurant = Restaurant.find(params[:restaurant_id])
-    end
+  def load_restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
+  end
 
   def index
     @reviews = @restaurant.reviews.all

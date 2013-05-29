@@ -1,8 +1,16 @@
 class ReviewsController < ApplicationController
   respond_to :html, :xml
 
+  before_filter :load_restaurant
+
+  private
+
+  def load_restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
+  end
+
   def index
-    @reviews = Review.where(:restaurant_id => params[:restaurant_id])
+    @reviews = @restaurant.reviews.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -12,7 +20,7 @@ class ReviewsController < ApplicationController
   # GET /reviews/1
   # GET /reviews/1.json
   def show
-    @review = Review.where("id = ", params[:id])
+    @review = @restaurant.reviews.find(params[:id])
     respond_with @review
     end
   end
@@ -20,7 +28,7 @@ class ReviewsController < ApplicationController
   # GET /reviews/new
   # GET /reviews/new.json
   def new
-    @review = Review.new
+    @review = @restaurant.reviews.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,15 +43,13 @@ class ReviewsController < ApplicationController
   # POST /reviews
   # POST /reviews.json
   def create
-    @review = Review.new(params[:review])
+    @review = @restaurant.reviews.new(params[:review])
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @review, notice: 'Review was successfully created.' }
-        format.json { render json: @review, status: :created, location: @review }
+        format.html { redirect_to [@restaurant, @review], notice: 'Review was successfully created.' }
       else
         format.html { render action: "new" }
-        format.json { render json: @review.errors, status: :unprocessable_entity }
       end
     end
   end

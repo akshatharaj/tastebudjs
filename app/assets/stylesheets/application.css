@@ -94,4 +94,5 @@ div.user_review hr {
 
 div#search {
   float: right;  
+  padding-left: 25px;
 }

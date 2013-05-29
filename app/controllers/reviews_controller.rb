@@ -6,8 +6,8 @@ class ReviewsController < ApplicationController
   skip_before_filter :authenticate_user, :only => [:show, :index]
 
   def index
-    restaurant = Restaurant.find(params[:restaurant_id])
-    @reviews = restaurant.reviews
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @reviews = @restaurant.reviews
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,15 +17,15 @@ class ReviewsController < ApplicationController
   # GET /reviews/1
   # GET /reviews/1.json
   def show
-    restaurant = Restaurant.find(params[:restaurant_id])
-    @review = restaurant.reviews.find(params[:id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @review = @restaurant.reviews.find(params[:id])
   end
 
   # GET /reviews/new
   # GET /reviews/new.json
   def new
-    restaurant = Restaurant.find(params[:restaurant_id])
-    @review = restaurant.reviews.build
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @review = @restaurant.reviews.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,15 +34,15 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1/edit
   def edit
-    restaurant = Restaurant.find(params[:restaurant_id])
-    @review = restaurant.reviews.find(params[:id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @review = @restaurant.reviews.find(params[:id])
   end
 
   # POST /reviews
   # POST /reviews.json
   def create
-    restaurant = Restaurant.find(params[:restaurant_id])
-    @review = restaurant.reviews.create(params[:review])
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @review = @restaurant.reviews.create(params[:review])
 
     respond_to do |format|
       if @review.save

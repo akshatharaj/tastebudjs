@@ -17,27 +17,32 @@
   border:2px solid;
 }
 
-table.hovertable {
-        font-family: verdana,arial,sans-serif;
-        font-size:11px;
-        color:#333333;
-        border-width: 1px;
-        border-color: #999999;
-        border-collapse: collapse;
+table.hovertable { 
+  font-family: verdana,arial,sans-serif;
+  font-size:11px;
+  color:#333333;
+  border-width: 1px;
+  border-color: #999999;
+  border-collapse: collapse;
+  width: 690px;
+  margin-left: 30px;
 }
 table.hovertable th {
-        background-color:#B57F53;
-        border-width: 1px;
-        padding: 8px;
-        border-style: solid;
-        border-color: #563B26;
+  background-color:#B57F53;
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #563B26;      
+  height: 50px;
 }
+
 table.hovertable tr {
-        background-color: #FDD9BF;
+  background-color: #FDD9BF;
 }
+
 table.hovertable td {
-        border-width: 1px;
-        padding: 8px;
-        border-style: solid;
-        border-color: #563B26;
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #563B26;
 }

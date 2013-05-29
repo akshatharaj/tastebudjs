@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = @restaurant.reviews.all
+    @reviews = Review.all
 
     respond_to do |format|
       format.html # index.html.erb

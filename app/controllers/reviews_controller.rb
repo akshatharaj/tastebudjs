@@ -13,10 +13,10 @@ class ReviewsController < ApplicationController
   # GET /reviews/1.json
   def show
     @review = Review.find(params[:id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @review }
     end
   end
 

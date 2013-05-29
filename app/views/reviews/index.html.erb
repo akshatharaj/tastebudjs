@@ -4,9 +4,9 @@
 
   <% @reviews.each do |review| %>
     <p> submitted by 
-      <%= review.user_id %> <br />
-      <%= review.rating %>
-      <%= review.comment %>
+      <%= review.user.email %> <br />
+      <%= review.rating %> <br />
+      Comment: <%= review.comment %>
     </p>
   <% end %>
 </div>

@@ -2,17 +2,12 @@ class ReviewsController < ApplicationController
   respond_to :html, :xml
 
   before_filter :authenticate_user!
-  before_filter :load_restaurant
 
   skip_before_filter :authenticate_user, :only => [:show, :index]
 
-  private
-  def load_restaurant
-    @restaurant = Restaurant.find(params[:restaurant_id])
-  end
-
   def index
-    @reviews = Review.all
+    restaurant = Restaurant.find(params[:restaurant_id])
+    @reviews = restaurant.reviews
 
     respond_to do |format|
       format.html # index.html.erb
@@ -22,13 +17,15 @@ class ReviewsController < ApplicationController
   # GET /reviews/1
   # GET /reviews/1.json
   def show
-    @review = @restaurant.reviews.find(params[:id])
+    restaurant = Restaurant.find(params[:restaurant_id])
+    @review = restaurant.reviews.find(params[:id])
   end
 
   # GET /reviews/new
   # GET /reviews/new.json
   def new
-    @review = @restaurant.reviews.new
+    restaurant = Restaurant.find(params[:restaurant_id])
+    @review = restaurant.reviews.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,17 +34,19 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1/edit
   def edit
-    @review = Review.find(params[:id])
+    restaurant = Restaurant.find(params[:restaurant_id])
+    @review = restaurant.reviews.find(params[:id])
   end
 
   # POST /reviews
   # POST /reviews.json
   def create
-    @review = @restaurant.reviews.new(params[:review])
+    restaurant = Restaurant.find(params[:restaurant_id])
+    @review = restaurant.reviews.create(params[:review])
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to [@restaurant, @review], notice: 'Review was successfully created.' }
+        format.html { redirect_to [@review.restaurant, @review], notice: 'Review was successfully created.' }
       else
         format.html { render action: "new" }
       end

@@ -7,5 +7,5 @@
    <%= @restaurant.state %>
    <%= @restaurant.zip %><br />
    <br />
-   <a href=<%= url_for(:action => 'index', :controller => 'reviews', :restaurant_id => @restaurant.id) %> View Comments </a>
+   <a href="<%= url_for(:action => 'index', :controller => 'reviews', :restaurant_id => @restaurant.id) %>"> View Comments </a>
 </div>

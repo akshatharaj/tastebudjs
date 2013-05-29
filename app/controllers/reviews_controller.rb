@@ -21,8 +21,6 @@ class ReviewsController < ApplicationController
   # GET /reviews/1.json
   def show
     @review = @restaurant.reviews.find(params[:id])
-    respond_with @review
-    end
   end
 
   # GET /reviews/new

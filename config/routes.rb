@@ -7,9 +7,8 @@ Tastebud::Application.routes.draw do
   devise_for :users
 
   root to: "home#index"
-  resources :restaurants
 
-  # match '/restaurants/:id/reviews/:id', :to => 'reviews#show', :as => :reviews
+  match '/restaurants/:id/reviews/', :to => 'reviews#show', :as => :reviews
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,7 +1,28 @@
-<ul>
-  <% @restaurants.each do |restaurant| %>
-    <li> 
-      <%= link_to restaurant.name, restaurant %>
-    </li>
-  <% end %>
-</ul>
+<h1>Restaurant Search Results</h1>
+
+<table class="hovertable">
+    <tr>
+        <th>Name     </th>
+        <th>Phone    </th>
+        <th>Address </th>
+        <th>City     </th>
+        <th>State    </th>
+        <th>Zip      </th>
+    </tr>
+
+<% @restaurants.each do |restaurant| %>
+    <tr>
+        <td><%= link_to restaurant.name, restaurant %></td>
+        <td><%=h restaurant.phone  %></td>
+        <td><%=h restaurant.address1 %></td>
+        <td><%=h restaurant.city    %></td>
+        <td><%=h restaurant.state  %></td>
+        <td><%=h restaurant.zip %></td>
+    </tr>
+<% end %>
+</table>
+
+<br />
+
+<a href="<%= url_for(:action => 'new', :controller => 'restaurants') %>"> Don't see the restaurant listed? Add it! </a>
+<br />

@@ -4,7 +4,6 @@ class ReviewsController < ApplicationController
   before_filter :load_restaurant
 
   private
-
   def load_restaurant
     @restaurant = Restaurant.find(params[:restaurant_id])
   end

@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+  respond_to :html, :xml
 
   def new
     @restaurant = Restaurant.new

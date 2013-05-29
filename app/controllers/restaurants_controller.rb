@@ -16,15 +16,11 @@ class RestaurantsController < ApplicationController
   end
 
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.search(params[:search])
     respond_to do |format|
       format.html # index.html.erb
     end
   end
-
-  def search
-    @restaurants = Restaurant.search params[:search]
-   end
 
   def show
     @restaurant = Restaurant.find(params[:id])

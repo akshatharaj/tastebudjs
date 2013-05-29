@@ -8,8 +8,9 @@ class Restaurant < ActiveRecord::Base
   validate :phone, :length => { :is => 5}, :allow_blank => true
 
   def self.search(search)
-    search_condition = "%" + search + "%"
-    find(:all, :conditions => ['name LIKE ? OR city LIKE ? or zip LIKE ?', search_condition, search_condition, search_condition])
-  end
-
+    if search
+      find(:all, :conditions => ['name LIKE ? or city LIKE ? or zip LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%"])
+    else
+      find(:all)
+    end
 end

@@ -12,11 +12,8 @@ class ReviewsController < ApplicationController
   # GET /reviews/1
   # GET /reviews/1.json
   def show
-    @review = Review.find(params[:id])
-    @restaurant = Restaurant.find(params[:restaurant_id])
-
-    respond_to do |format|
-      format.html # show.html.erb
+    @review = Review.where("id = ", params[:id])
+    respond_with @review
     end
   end
 

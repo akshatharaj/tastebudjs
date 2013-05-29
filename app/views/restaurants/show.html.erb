@@ -8,5 +8,6 @@
    <%= @restaurant.zip %><br />
    <br />
    <a href="<%= url_for(:action => 'index', :controller => 'reviews', :restaurant_id => @restaurant.id) %>"> View Reviews </a>
+   <br />
    <%= link_to 'Back', :back %>
 </div>

@@ -8,7 +8,6 @@
         <th>City     </th>
         <th>State    </th>
         <th>Zip      </th>
-        <th>Comments </th>
     </tr>
 
 <% @restaurants.each do |restaurant| %>
@@ -19,12 +18,6 @@
         <td><%=h restaurant.city    %></td>
         <td><%=h restaurant.state  %></td>
         <td><%=h restaurant.zip %></td>
-        <td><%=h restaurant.other_comments    %></td>
-        <td><%= link_to'Show', restaurant                   %></td>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant)  %></td> 
-        <td><%= link_to 'Destroy', restaurant,
-                 :confirm => 'Are you sure?',
-                 :method  => :delete                  %></td>
     </tr>
 <% end %>
 </table>

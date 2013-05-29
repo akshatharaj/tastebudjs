@@ -9,7 +9,7 @@ Tastebud::Application.routes.draw do
   root to: "home#index"
   resources :restaurants
 
-  match '/restaurants/:id/reviews/:id', :to => 'reviews#show', :as => :review
+  match '/restaurants/:id/reviews/:id', :to => 'reviews#show', :as => :reviews
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

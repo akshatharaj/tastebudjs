@@ -48,8 +48,8 @@ table.hovertable td {
 }
 
 div.objectdetail {
-  width: 700px;
-  margin-left: 30px;
+  width: 748px;
+  margin-top: 30px;
   background-color: #FDD9BF;
   border-style: solid;
   border-color: #563B26;
@@ -58,11 +58,11 @@ div.objectdetail {
 div.objectdetail h1 {
   font-style:italic;
   font-family: Gabriola;
-  font-size: 20px;
+  font-size: 26px;
 }
 
 div.objectdetail p {
   font-family: Century;
-  font-size: 12px;
+  font-size: 16px;
 }
 

@@ -151,7 +151,7 @@ label{
 
 .pagination a:hover, .pagination a:active {
   border: 1px solid #000099;
-  color: #000;
+  color: #B57F53;
 }
 
 .pagination span.current {
@@ -159,7 +159,7 @@ label{
   margin: 2px;
   border: 1px solid #000099;
   font-weight: bold;
-  background-color: #000099;
+  background-color: #FDD9BF;
   color: #FFF;
 }
 

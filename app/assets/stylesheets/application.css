@@ -127,3 +127,11 @@ div.home_page_text p {
   float: right;
   padding-left: 25px;
 }
+
+label{
+  width: 4em;
+  float: left;
+  text-align: right;
+  margin-right: 0.5em;
+  display: block
+}

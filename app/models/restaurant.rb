@@ -9,9 +9,9 @@ class Restaurant < ActiveRecord::Base
 
   def self.search(search)
     if search
-      where('name ILIKE ? or city ILIKE ?', "%#{search}%", "%#{search}%")
+      where('name ILIKE ? or city ILIKE ?', "%#{search}%", "%#{search}%").paginate(:page => params[:page], :per_page => 2)
     else
-      find(:all)
+      find(:all).paginate(:page => params[:page], :per_page => 2).order('id DESC')
     end
   end
 end

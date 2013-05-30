@@ -14,7 +14,7 @@
 .centered {
   margin: 0 auto;
   width: 748px;
-  border:2px solid;
+  border:1px solid;
 }
 
 table.hovertable { 
@@ -172,7 +172,8 @@ label{
 }
 
 div#footer {
-  background-color: #B57F53;
+  margin-left: 30px;
+  background-color: #5C0C0B;
   padding: 5px 5px 5px 5px; 
 }
 
@@ -180,4 +181,6 @@ div#footer p {
   font-family: Century;
   font-size: 14px;
   font-weight: bold;
+  font-style:italic;
+  color: #E4A45C;
 }

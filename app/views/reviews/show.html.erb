@@ -1,19 +1,16 @@
 
-<div id="object_detail">
+<div id="objectdetail">
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <b>Restaurant:</b>
+  <h1>
     <%= @review.restaurant.name %>
-  </p>
+  </h1>
 
-  <p>
-    <b>User:</b>
+  <p> by 
     <%= @review.user.email %>
   </p>
 
   <p>
-    <b>Rating:</b>
     <%= @review.rating %>
   </p>
 
@@ -21,4 +18,8 @@
     <b>Comment:</b>
     <%= @review.comment %>
   </p>
+   <a href="<%= url_for(:action => 'index', :controller => 'reviews', :restaurant_id => @restaurant.id) %>"> View all reviews for <%= @review.restaurant.name %></a>
+   <br />
+   <a href="<%= url_for(:action => 'index', :controller => 'restaurants') %>"> Back to Restaurant Listing </a>
+
 </div>

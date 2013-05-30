@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tastebud</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="centered">
+  <div id="banner">
+    <img src="/assets/banner.jpg" />
+  </div>
+  <div id="user_now">
+    <% if user_signed_in? %>
+      Welcome <%= current_user.email %>, Not this user?
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete  %>
+    <% else %>
+           <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to (image_tag 'home.png', :class => 'home_link'), root_url %>
+  </div>
+  <br />
+<% flash.each do |name, msg| %>
+   <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+<div class="objectdetail">
+  <%= yield %>
+</div>
+</body>
+</html>

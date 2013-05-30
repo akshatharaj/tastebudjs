@@ -4,7 +4,8 @@
 
   <% @reviews.each do |review| %>
     <p> submitted by 
-      <%= review.user.email %> <br />
+      <%= review.user.email %> on 
+      <%= review.created_at %> <br />
       <%= review.rating %> <br />
       Comment: <%= review.comment %>
     </p>

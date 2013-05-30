@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :restaurant_id %><br />
-    <%= f.number_field :restaurant_id %>
+    <%= f.hidden_field :restaurant_id, :value => @restaurant.id %>
   </div>
   <div class="field">
     <%= f.hidden_field :user_id, :value => current_user.id %>
@@ -24,7 +23,7 @@
   </div>
   <div class="field">
     <%= f.label :comment %><br />
-    <%= f.text_field :comment %>
+    <%= f.text_area(:comment, size => '50x10') ?>
   </div>
   <div class="actions">
     <%= f.submit %>

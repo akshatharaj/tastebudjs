@@ -9,7 +9,7 @@ class Restaurant < ActiveRecord::Base
 
   def self.search(search)
     if search
-      where('name LIKE ? or city LIKE ?', "%#{search}%", "%#{search}%")
+      where('name ILIKE ? or city ILIKE ?', "%#{search}%", "%#{search}%")
     else
       find(:all)
     end

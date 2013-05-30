@@ -19,7 +19,9 @@
   </div>
   <div class="field">
     <%= f.label :rating %><br />
-    <%= f.text_field :rating, :size => 50 %>
+    <%= options_for_select([['Certainly Not worth a second visit', '1/5'], ['Average food and service', '2/5'], 
+                            ['Good food, worth the money', '3/5'], ['Definitely going back again', '4/5'],
+                            ['Best restaurant I have eaten at', '5/5']]) %>
   </div>
   <div class="field">
     <%= f.label :comment %><br />

@@ -1,6 +1,5 @@
 class Restaurant < ActiveRecord::Base
   attr_accessible :address1, :address2, :city, :name, :other_comments, :phone, :state, :zip
-  @@per_page = 2
   has_many :reviews
 
   validates :name, :presence => true
@@ -10,9 +9,9 @@ class Restaurant < ActiveRecord::Base
 
   def self.search(search, page)
     if search
-      where('name ILIKE ? or city ILIKE ?', "%#{search}%", "%#{search}%").paginate(:page => page)
+      where('name ILIKE ? or city ILIKE ?', "%#{search}%", "%#{search}%").paginate(:page => page, :per_page => 2)
     else
-      self.paginate(:page => page).order('id DESC')
+      self.paginate(:page => page, :per_page => 2).order('id DESC')
     end
   end
 end

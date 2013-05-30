@@ -11,6 +11,9 @@
     </p>
   <hr>
   <% end %>
+  <br />
+  <%= will_paginate @reviews %>
+  <br />
   <a href="<%= url_for(:action => 'new', :controller => 'reviews', :restaurant_id => @restaurant.id) %>"> Add Review </a>
   <br />
   <a href="<%= url_for(:action => 'show', :controller => 'restaurants', :id => @restaurant.id) %>"> Back </a>

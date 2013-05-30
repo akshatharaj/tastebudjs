@@ -137,8 +137,9 @@ label{
 }
 
 .pagination {
-    padding: 3px;
-    margin: 3px;
+  float: right;
+  padding: 3px;
+  margin: 3px;
   }
 
 .pagination a {
@@ -146,12 +147,12 @@ label{
   margin: 2px;
   border: 1px solid #aaaadd;
   text-decoration: none;
-  color: #000099;
+  background-color: #FDD9BF;
 }
 
 .pagination a:hover, .pagination a:active {
   border: 1px solid #000099;
-  color: #B57F53;
+  background-color: #B57F53;
 }
 
 .pagination span.current {

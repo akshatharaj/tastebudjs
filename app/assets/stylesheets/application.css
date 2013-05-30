@@ -24,7 +24,7 @@ table.hovertable {
   border-width: 1px;
   border-color: #999999;
   border-collapse: collapse;
-  width: 742px;
+  width: 744px;
 }
 
 table.hovertable th {
@@ -49,7 +49,7 @@ table.hovertable td {
 
 div.objectdetail {
   padding-left: 10px;
-  width: 742px;
+  width: 732px;
   margin-top: 30px;
   background-color: #FDD9BF;
   border-style: solid;
@@ -105,7 +105,7 @@ h1.listing_heading {
 
 div.home_page_text {
   padding-left: 10px;
-  width: 742px;
+  width: 732px;
   margin-top: 30px;
   background-color: #FDD9BF;
   border-style: solid;

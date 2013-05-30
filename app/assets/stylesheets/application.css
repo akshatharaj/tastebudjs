@@ -129,9 +129,9 @@ div.home_page_text p {
 }
 
 label{
-  width: 70px;
+  width: 100px;
   float: left;
-  text-align: right;
+  text-align: left;
   margin-right: 0.5em;
   display: block
 }

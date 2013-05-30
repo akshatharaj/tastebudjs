@@ -1,5 +1,4 @@
 <h1 class="listing_heading">Restaurant Listing</h1>
-<%= will_paginate @restaurants %>
 <div id="search">
   <%= render :partial => 'restaurants/search' %>
 </div>
@@ -25,8 +24,8 @@
     </tr>
 <% end %>
 </table>
-<% end %>
 <br />
-
+<%= will_paginate @posts %>
+<br />
 <a href="<%= url_for(:action => 'new', :controller => 'restaurants') %>"> Don't see the restaurant listed? Add it! </a>
 <br />

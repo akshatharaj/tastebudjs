@@ -1,5 +1,5 @@
 
-<div class="objectdetail">
+<div class="user_review">
   <p id="notice"><%= notice %></p>
 
   <h1>
@@ -21,5 +21,5 @@
    <a href="<%= url_for(:action => 'index', :controller => 'reviews', :restaurant_id => @restaurant.id) %>"> View all reviews for <%= @review.restaurant.name %></a>
    <br />
    <a href="<%= url_for(:action => 'index', :controller => 'restaurants') %>"> Back to Restaurant Listing </a>
-
+   <br />
 </div>

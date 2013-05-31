@@ -15,6 +15,7 @@
   margin: 0 auto;
   width: 748px;
   border:1px solid;
+  background-color: #FFD5BC;
 }
 
 table.hovertable { 
@@ -177,6 +178,7 @@ div#footer {
 }
 
 div#footer p {
+  text-align: center;
   font-family: Century;
   font-size: 14px;
   font-weight: bold;

@@ -1,7 +1,14 @@
-tastebud is a web application that provides a platform for submitting reviews 
+tastebud(developed as an academic project) is a web application that provides a platform for submitting reviews 
 on restaurants or viewing available reviews about restaurants that users care
 about.
 
-This README would be updated with more info as the application evolves.
+Users sign up for membership before submitting reviews on the site.
+
+To install this rails web application:
+1. Fork a copy of this project 
+2. Clone the forked copy 
+3. cd over to the web application root
+4. Run build install to get all required gems
+5. deploy the application on a web server
 
 -tastebud team

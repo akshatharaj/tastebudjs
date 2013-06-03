@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem "jquery-rails"
+
 gem 'will_paginate'
 
 gem 'devise'

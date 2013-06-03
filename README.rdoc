@@ -1,4 +1,7 @@
-tastebud(developed as an academic project) is a web application that provides a platform for submitting reviews 
+
+Academic project 1: COSC 630 05/2013. araj0@frostburg.edu
+
+tastebud is a web application that provides a platform for submitting reviews 
 on restaurants or viewing available reviews about restaurants that users care
 about.
 

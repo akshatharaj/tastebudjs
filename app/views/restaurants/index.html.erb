@@ -29,3 +29,7 @@
 <br />
 <a href="<%= url_for(:action => 'new', :controller => 'restaurants') %>"> Don't see the restaurant listed? Add it! </a>
 <br />
+
+<div class="add_restaurant">
+  <%= render "new", :@restaurant => Restaurant.new %>
+</div>

@@ -1,5 +1,5 @@
-<div class="user_review">
-  <h1> Please enter restaurant information </h1>
+  <br /
+  ><h1> Please enter restaurant information </h1>
   <br />
   <%= form_for @restaurant do |f| -%>
        <label>Name:</label> <%= f.text_field :name %> <br />
@@ -13,6 +13,3 @@
        <%= f.submit %>
   <% end -%>
    <br />
-   <a href="<%= url_for(:action => 'index', :controller => 'restaurants') %>"> Back to Restaurant Listing </a>
-   <br/>
-</div>

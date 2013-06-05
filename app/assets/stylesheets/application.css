@@ -52,6 +52,7 @@ div.objectdetail {
   padding-left: 10px;
   width: 732px;
   margin-top: 30px;
+  padding-bottom: 20px;
   background-color: #FDD9BF;
   border-style: solid;
   border-color: #563B26;
@@ -68,16 +69,22 @@ div.objectdetail p {
   font-size: 16px;
 }
 
-div.user_review {
-  width: 732px;
-  padding-left: 10px;
-  margin-top: 30px;
+div.add_restaurant{
+  margin-top: 20px;
   background-color: #FDD9BF;
-  border-style: solid;
-  border-color: #563B26;
 }
 
-div.user_review h1 {
+div.add_restaurant label, h1{
+  margin-left: 15px;
+}
+
+div.user_review{
+  margin-left: 20px;
+  margin-top: 20px;
+  background-color: #FDD9BF;
+}
+
+div.user_review , div.add_restaurant h1 {
   font-style:italic;
   font-family: Gabriola;
   font-size: 24px;
@@ -184,4 +191,13 @@ div#footer p {
   font-weight: bold;
   font-style:italic;
   color: #E4A45C;
+}
+
+input[type="button"], input[type="submit"]{
+  margin-top: 15px;
+  margin-left: 125px;
+}
+
+.field{
+  margin-left: 15px;
 }

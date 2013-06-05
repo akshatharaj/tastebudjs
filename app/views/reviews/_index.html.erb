@@ -1,7 +1,5 @@
-
 <div class="user_review">
-  <h1> User Reviews </h1> <br />   
-
+  <h3> User Reviews </h3>
   <% @reviews.each do |review| %>
     <p> submitted by 
       <%= review.user.email %> on 
@@ -14,9 +12,9 @@
   <br />
   <%= will_paginate @reviews %>
   <br />
-  <a href="<%= url_for(:action => 'new', :controller => 'reviews', :restaurant_id => @restaurant.id) %>"> Add Review </a>
-  <br />
-  <a href="<%= url_for(:action => 'show', :controller => 'restaurants', :id => @restaurant.id) %>"> Back </a>
-  <br />
 </div>
+<a href="<%= url_for(:action => 'new', :controller => 'reviews', :restaurant_id => @restaurant.id) %>"> Add Review </a>
+<br />
+
+<%= render "reviews/new", :@review => Review.new %>
 

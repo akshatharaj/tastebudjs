@@ -201,3 +201,11 @@ input[type="button"], input[type="submit"]{
 .field{
   margin-left: 15px;
 }
+
+#add_new{
+  margin-left: 20px;
+}
+
+#add_new:hover{
+  background-color: #B57F53;
+}

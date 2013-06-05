@@ -1,3 +1,4 @@
+<%= javascript_include_tag "restaurants" %>
 <h1 class="listing_heading">Restaurant Listing</h1>
 <div id="search">
   <%= render :partial => 'restaurants/search' %>
@@ -27,7 +28,7 @@
 <br />
 <%= will_paginate @restaurants %>
 <br />
-<a href="<%= url_for(:action => 'new', :controller => 'restaurants') %>"> Don't see the restaurant listed? Add it! </a>
+<a href="#" id="add_new"> Don't see the restaurant listed? Add it! </a>
 <br />
 
 <div class="add_restaurant">

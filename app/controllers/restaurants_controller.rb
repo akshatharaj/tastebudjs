@@ -1,5 +1,7 @@
 class RestaurantsController < ApplicationController
-  respond_to :html, :xml
+  respond_to :html, :js
+
+  before_filter :authenticate_user!
 
   def new
     @restaurant = Restaurant.new
@@ -7,11 +9,9 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(params[:restaurant])
-    if @restaurant.save
-      flash[:notice] = "Successfully created new restaurant."
-      redirect_to @restaurant
-    else
-      redirect_to new_restaurant_path
+    @restaurant.save
+    respond_to do |format|
+      format.js 
     end
   end
 

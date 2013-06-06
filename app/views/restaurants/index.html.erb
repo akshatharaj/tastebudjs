@@ -4,7 +4,8 @@
   <%= render :partial => 'restaurants/search' %>
 </div>
 
-<table class="hovertable">
+<table id="restaurant_listing">
+  <thead>
     <tr>
         <th>Name     </th>
         <th>Phone    </th>
@@ -13,8 +14,9 @@
         <th>State    </th>
         <th>Zip      </th>
     </tr>
-
-<% @restaurants.each do |restaurant| %>
+  </thead>
+  <tbody>
+  <% @restaurants.each do |restaurant| %>
     <tr>
         <td><%= link_to restaurant.name, restaurant %></td>
         <td><%=h restaurant.phone  %></td>
@@ -23,12 +25,13 @@
         <td><%=h restaurant.state  %></td>
         <td><%=h restaurant.zip %></td>
     </tr>
-<% end %>
+  <% end %>
+  </tbody>
 </table>
 <br />
 <%= will_paginate @restaurants %>
 <br />
-<a href="#" id="add_new"> Don't see the restaurant listed? Add it! </a>
+<a class="links" href="#" id="add_new"> Don't see the restaurant listed? Add it! </a>
 <br />
 
 <div class="add_restaurant">

@@ -18,7 +18,7 @@
   background-color: #FFFBF7;
 }
 
-table.hovertable { 
+table#restaurant_listing{
   font-family: verdana,arial,sans-serif;
   font-size:11px;
   color:#333333;
@@ -28,7 +28,7 @@ table.hovertable {
   width: 748px;
 }
 
-table.hovertable th {
+table#restaurant_listing th {
   background-color:#B57F53;
   border-width: 1px;
   padding: 8px;
@@ -37,11 +37,11 @@ table.hovertable th {
   height: 35px;
 }
 
-table.hovertable tr {
+table#restaurant_listing tr {
   background-color: #FDD9BF;
 }
 
-table.hovertable td {
+table#restaurant_listing td {
   border-width: 1px;
   padding: 8px;
   border-style: solid;
@@ -206,6 +206,8 @@ input[type="button"], input[type="submit"]{
   margin-left: 20px;
 }
 
-#add_new:hover{
-  background-color: #B57F53;
+.links:hover{
+  color: #B57F53;
+  font-weight: bold;
+  background-color: transparent;
 }

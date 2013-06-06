@@ -1,5 +1,7 @@
+<%= javascript_include_tag "reviews" %>
 <div class="user_review">
   <h3> User Reviews </h3>
+  <div id="restaurant_reviews">
   <% @reviews.each do |review| %>
     <p> submitted by 
       <%= review.user.email %> on 
@@ -9,12 +11,16 @@
     </p>
   <hr>
   <% end %>
+  </div>
   <br />
   <%= will_paginate @reviews %>
   <br />
 </div>
-<a href="<%= url_for(:action => 'new', :controller => 'reviews', :restaurant_id => @restaurant.id) %>"> Add Review </a>
+
+<a class="links" id="add_review" href="<%= url_for(:action => 'new', :controller => 'reviews', :restaurant_id => @restaurant.id) %>"> Submit your review </a>
+
 <br />
 
-<%= render "reviews/new", :@review => Review.new %>
-
+<div id="new_review">
+ <%= render "reviews/new", :@review => Review.new %>
+</div>

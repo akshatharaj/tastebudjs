@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
-  respond_to :html, :xml
+  respond_to :html, :js
 
-  before_filter :authenticate_user!, :only => [:new]
+  before_filter :authenticate_user!
 
   def index
     @restaurant = Restaurant.find(params[:restaurant_id])
@@ -36,18 +36,24 @@ class ReviewsController < ApplicationController
     @review = @restaurant.reviews.find(params[:id])
   end
 
+
+  def create
+    @restaurant = Restaurant.new(params[:restaurant])
+    @restaurant.save
+    respond_to do |format|
+      format.js
+    end
+  end
+
+
   # POST /reviews
   # POST /reviews.json
   def create
     @restaurant = Restaurant.find(params[:restaurant_id])
     @review = @restaurant.reviews.create(params[:review])
-
+    @review.save
     respond_to do |format|
-      if @review.save
-        format.html { redirect_to [@review.restaurant, @review], notice: 'Review was successfully created.' }
-      else
-        format.html { render action: "new" }
-      end
+      format.js
     end
   end
 

@@ -1,0 +1,2 @@
+
+$("#restaurant_listing tbody").prepend("<%= escape_javascript(render :partial => "restaurant_row", :locals => { :restaurant => @restaurant } ) %>");

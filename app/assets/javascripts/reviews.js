@@ -6,9 +6,9 @@ $('document').ready(function() {
   $("#view_reviews").unbind("click").on("click", function(e) {
     e.preventDefault();
 
-    if($("#view_reviews").text() != 'Cancel')
+    if($("#view_reviews").text() != 'Hide Reviews')
     {
-      $("#view_reviews").text('Cancel');
+      $("#view_reviews").text('Hide Reviews');
       $("#reviews_listing").show();
     }
 

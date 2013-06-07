@@ -102,7 +102,6 @@ div.user_review hr {
 
 div#search {
   float: right;  
-  padding-left: 25px;
 }
 
 h1.listing_heading {
@@ -210,4 +209,9 @@ input[type="button"], input[type="submit"]{
   color: #B57F53;
   font-weight: bold;
   background-color: transparent;
+}
+
+#search_field{
+  width: 250px;
+  padding-right: 0px;
 }

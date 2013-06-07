@@ -20,7 +20,6 @@ function checkScroll() {
   }
 
   if ($("#view_reviews").text() == 'Hide Reviews' && nearBottomOfPage() && window.location.pathname.match(/^\/restaurants\/([0-9]+)$/)) {
-    console.log('paging reviews');
     currentPage++;
     $.ajax({
       type: 'GET',

@@ -1,0 +1,23 @@
+  <thead>
+    <tr>
+        <th>Name     </th>
+        <th>Phone    </th>
+        <th>Address </th>
+        <th>City     </th>
+        <th>State    </th>
+        <th>Zip      </th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @restaurants.each do |restaurant| %>
+    <tr>
+        <td><%= link_to restaurant.name, restaurant %></td>
+        <td><%=h restaurant.phone  %></td>
+        <td><%=h restaurant.address1 %></td>
+        <td><%=h restaurant.city    %></td>
+        <td><%=h restaurant.state  %></td>
+        <td><%=h restaurant.zip %></td>
+    </tr>
+  <% end %>
+  </tbody>
+

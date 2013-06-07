@@ -41,5 +41,23 @@ $('document').ready(function() {
 
   });
 
+  $("#search_field").unbind('keyup').keyup(function(e){
+
+    console.log('searched');
+
+    $.ajax({
+      type: 'GET',
+      url: ["/restaurants?search=", $("#search_field").val()].join(''),
+      error: function(request, error){ console.log(request.responseText); },
+      success: function(data)
+      {
+      },
+      complete: function (){
+      }
+    });     
+
+ });  
+  
+
 });
 

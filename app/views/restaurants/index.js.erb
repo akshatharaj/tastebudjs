@@ -1,2 +1,7 @@
+<% if params[:search] %>
+  $("#restaurant_listing").html("<%= escape_javascript(render :partial => "restaurant_search_hits", :locals => { :restaurants => @restaurants } ) %>");
+<% end %>
 
-$("#restaurant_listing").html("<%= escape_javascript(render :partial => "restaurant_search_hits", :locals => { :restaurants => @restaurants } ) %>");
+<% if params[:page] %>
+  $("#restaurant_listing").append("<%= escape_javascript(render :partial => "restaurant_paging", :locals => { :restaurants => @restaurants } ) %>");
+<% end %>

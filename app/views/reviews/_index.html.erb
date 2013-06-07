@@ -13,8 +13,6 @@
   <% end %>
   </div>
   <br />
-  <%= will_paginate @reviews %>
-  <br />
 </div>
 
 <a class="links" id="add_review" href="<%= url_for(:action => 'new', :controller => 'reviews', :restaurant_id => @restaurant.id) %>"> Submit your review </a>

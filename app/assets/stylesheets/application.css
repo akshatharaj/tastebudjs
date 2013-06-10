@@ -42,6 +42,7 @@ table#restaurant_listing tr {
 }
 
 table#restaurant_listing td {
+  height: 30px;
   border-width: 1px;
   padding: 8px;
   border-style: solid;
